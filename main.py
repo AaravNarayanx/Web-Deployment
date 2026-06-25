@@ -286,7 +286,7 @@ def contact():
     return render_template("contact.html" , msg_sent = False)
 
 def send_email(name , email , phone , message):
-    email_message = f"Subject:New Message\n\Name:{name} \n Email : {email}\n Phone :{phone} \n Message : {message}"
+    email_message = f"Subject:New Message\n Name:{name} \n Email : {email}\n Phone :{phone} \n Message : {message}"
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(MAIL_ADDRESS,MAIL_APP_PW)
